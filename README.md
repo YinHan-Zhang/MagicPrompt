@@ -1,7 +1,5 @@
-# MagicPrompt: Ultra-Lightweight Prompt Tuning for Video Generation
-
 <p align="center">
-  <img src="asset/logo.png" alt="MagicPrompt Logo" width="400">
+  <img src="asset/logo.png" alt="MagicPrompt: Ultra-Lightweight Prompt Tuning for Video Generation" width="860">
 </p>
 
 ## 0. Environment setup
