@@ -1,4 +1,4 @@
-# MagicPrompt
+# MagicPrompt: Ultra-Lightweight Prompt Tuning for Video Generation
 
 <p align="center">
   <img src="asset/logo.png" alt="MagicPrompt Logo" width="400">
