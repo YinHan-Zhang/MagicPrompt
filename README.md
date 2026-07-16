@@ -4,17 +4,21 @@
 
 ## 0. Environment setup
 
+Create project environment: 
 ```
-conda create -n wan python=3.10 -y
+conda create -n magicprompt python=3.10 -y
 conda activate magicprompt
 pip install -r requirements.txt
 ```
 
-Download the required pretrained models with `bash models/download_models.sh`.
+Download the required pretrained models: 
+```
+bash models/download_models.sh
+```
 
 ## 1. Data preparation
 
-All datasets are described by a single **JSON metadata file** (`--train_data_meta`), while the actual video / image files live under `--train_data_dir`. Paths in the JSON are **relative to** `--train_data_dir`.
+All datasets are described by a single **JSON metadata file** (`--train_data_meta`), while the actual video/image files live under `--train_data_dir`. Paths in the JSON are **relative to** `--train_data_dir`.
 
 ### 1.1 T2V
 
@@ -31,7 +35,7 @@ A flat list of samples. Each item needs `file_path`, `text` and `type`:
 ```
 
 - `file_path`: path to the target video (or image) **relative to** `--train_data_dir`.
-- `text`: the caption / prompt.
+- `text`: the caption/prompt.
 - `type`: `"video"` or `"image"`.
 
 
@@ -64,7 +68,7 @@ A flat list. Each item references a **target video** plus a **control video** (e
 
 
 
-### 2.1 Text-to-Video (`t2v`)
+### 2.1 Text-to-Video
 
 ```bash
 bash scripts/t2v/train.sh
@@ -181,5 +185,4 @@ Main knobs:
 | `prompt` / `negative_prompt` | text inputs                                                                       |
 | `start_image` / `end_image`  | (optional) first/last frame conditioning                                          |
 | `save_path`                  | output directory                                                                  |
-
 
